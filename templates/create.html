@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>새글쓰기</h1>
+		<form method="post" action="">
+			<!--  django에서 post 방식으로 데이터를 전송할 때 기본으로 제공하는 보안수단 -->
+			{%csrf_token%}
+			<!-- forms.py 폼의 각 필드를 p 태그 안에서 레이블과 텍스트로 배치한다 -->
+			{{form.as_p}}
+			<input type="submit" value="등록하기" />
+		</form>
+	</body>
+</html>
